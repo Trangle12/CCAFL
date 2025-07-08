@@ -65,7 +65,7 @@ def do_train_stage2(args,
     cam2accu = torch.stack(cam2accu, dim=0)
 
     #########################################################
-    trainer = ViTTrainerFp16(args , model , id_count_each_cam)
+    trainer = TrainerFp16(args , model , id_count_each_cam)
     trainer.cam_classifier = cam_classifier
     for epoch in range(args.epochs):
 
