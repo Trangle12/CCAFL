@@ -18,7 +18,7 @@ class TrainerFp16(object):
     trainer with FP16 forwarding.
     """
     def __init__(self, args , encoder,id_count_each_cameras, cam_classifier=None,  memory = None , cam_memorys=None,new_labels=None, cluster_text_features = None, cam2accu = None,pseudo2accu_mask = None, cam_text_features = None, nums_class = 4821,  inter_cam_memory = None, all_cam = 6):
-        super(ViTTrainerFp16, self).__init__()
+        super(TrainerFp16, self).__init__()
         self.args = args
         self.encoder = encoder
         self.memory = memory
