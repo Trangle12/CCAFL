@@ -61,7 +61,7 @@ class TrainerFp16(object):
         else:
             self.epsilon = 0.8   # 0.8 Best
             self.margin_adv = 0.5
-            self.loss_weight = 0.0
+            self.loss_weight = 0.5
             self.inter_text_loss_epoch = 40
             self.start_adv_epoch = 40
             self.end_adv_epoch = 60
