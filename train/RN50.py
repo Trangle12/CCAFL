@@ -156,10 +156,11 @@ class PromptLearner(nn.Module):
         ctx_dim = 512
         # use given words to initialize context vectors
         ctx_init = ctx_init.replace("_", " ")
-        if dataset_name == 'market1501' or dataset_name == 'msmt17':
-            n_ctx = 5   # market msmt17 5  duke 6
-        elif dataset_name == 'dukemtmc':
-            n_ctx = 6
+        # if dataset_name == 'market1501' or dataset_name == 'msmt17':
+        #     n_ctx = 5   # market msmt17 5  duke 6
+        # elif dataset_name == 'dukemtmc':
+        #     n_ctx = 6
+        n_ctx = 4
 
         tokenized_prompts = clip.tokenize(ctx_init).cuda()
         with torch.no_grad():
